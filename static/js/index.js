@@ -17,8 +17,6 @@ function sensor2(){
 
 
 
-
-
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
@@ -31,7 +29,7 @@ function sensor2(){
    useSSL: false,
     userName: "mdpilatuna.fie@unach.edu.ec",
     password: "quitociudadhermosa",
-    onSuccess:onConnect,
+    onSuccess:onConnect,  
     onFailure:doFail
   }
 
@@ -43,10 +41,8 @@ function sensor2(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("mdpilatuna.fie@unach.edu.ec/WEB");
-    message = new Paho.MQTT.Message("Conexion Establecida");
-    message.destinationName = "mdpilatuna.fie@unach.edu.ec/RASP";
-    client.send(message);
+    client.subscribe("jeffersson.pino@gmail.com/WEB");
+
 	
   }
 
@@ -58,9 +54,9 @@ function sensor2(){
   // called when the client loses its connection
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
+      console.log("onConnectionLost:"+responseObject.errorMessage);
+    }
   }
-
-  }// called when a message arrives
   function onMessageArrived(message) {
 	document.getElementById("historial1").innerHTML=messege;
   }
