@@ -1,14 +1,17 @@
 //https://www.eclipse.org/paho/clients/js/
 
 function sensor1() {
+	console.log("Enviando mensaje s1");
 	message= new Paho.MQTT.Message("s1");
 	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
 	client.send(message);
 }
-function sensor2(){	
+function sensor2(){
+		console.log("Enviando mensaje s2");
 	message= new Paho.MQTT.Message("s2");
 	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
 	client.send(message);
+
 }
 
 
