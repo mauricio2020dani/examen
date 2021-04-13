@@ -60,10 +60,7 @@ function sensor2(){
     if (responseObject.errorCode !== 0) {
   }
 
-  // called when a message arrives
+  }// called when a message arrives
   function onMessageArrived(message) {
 	document.getElementById("historial1").innerHTML=messege;
   }
-  
-  }
-  
