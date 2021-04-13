@@ -65,3 +65,5 @@ function sensor2(){
 	document.getElementById("historial1").innerHTML=messege;
   }
   
+  }
+  
