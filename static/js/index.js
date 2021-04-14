@@ -2,16 +2,15 @@
 
 function sensor1() {
 	console.log("Enviando mensaje s1");
-//	message= new Paho.MQTT.Message("s1");
-//	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
-//	client.send(message);
+	message= new Paho.MQTT.Message("s1");
+	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
+	client.send(message);
 }
 function sensor2(){
 		console.log("Enviando mensaje s2");
-//	message= new Paho.MQTT.Message("s2");
-//	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
-//	client.send(message);
-
+	message= new Paho.MQTT.Message("s2");
+	message.destinationName="mdpilatuna.fie@unach.edu.ec/RASP";
+	client.send(message);
 }
 
 
@@ -66,6 +65,6 @@ function sensor2(){
   function onMessageArrived(message) {
 	console.log(message.payloadString);
     mentrada=message.payloadString;
-    document.getElementById("historial1").innerHTML=mentrada;
+    document.getElementById("historial").innerHTML=mentrada;
   }
   
