@@ -7,12 +7,24 @@
 </head>
 <body>
 
-<h1>Monitoreo de dos sensores remotos</h1>
+<h1>Embebidos</h1>
 <img src="/static/images/iot.png" alt="user">
-<button type="button" onclick="sensor1">Historial Sensor1</button>
-<button type="button" onclick="sensor2">Historial Sensor2</button>
+<h1>Sensor:</h><h id="sensor">--</h1>
+<button id = 'LED1On'type="button" onclick="LED1_On();">
+LED1 ON!</button>
+<button id = 'LED1Off' type="button" onclick="LED1_Off();">
+LED1_OFF!</button>
 
-<h1>Historial del sensor:</h><h id="historial1">--</h1>
+<script>
 
-</body>
-</html>
+function LED1_On() {
+	alert("led on");
+	console.log("led on");
+  
+}
+function LED1_Off(){
+	alert("led off");
+	console.log("led off");
+}
+
+</script>
